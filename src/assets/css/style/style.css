@@ -4,5 +4,5 @@
 @import "/src//assets/css/components/navBar//navBar.css";
 @import "/src/assets/css/systemStyle/systemStyle.css";
 @import "/src/assets/css/app/App.css";
-@import "/src/assets/css/views/views.css";
+@import "/src/assets/css/views/global.scss";
 @import "~react-toastify/dist/ReactToastify.css";

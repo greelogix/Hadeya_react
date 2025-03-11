@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import 'src/assets/css/views/landing/landing.scss'
 
 const Landing = (props) => {
   return <div className="">Landing Page</div>;
