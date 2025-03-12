@@ -96,3 +96,26 @@
     line-height: 1.6;
   }
 }
+.how-works-section {
+  .heading {
+    font-size: clamp(35px, 4vw, 48px);
+  }
+  .title {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+  .number {
+    font-size: clamp(30px, 4vw, 40px);
+  }
+}
+
+.why-hadeya-section {
+  .heading {
+    font-size: clamp(35px, 4vw, 48px);
+  }
+  .title {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+  .number {
+    font-size: clamp(30px, 4vw, 40px);
+  }
+}
