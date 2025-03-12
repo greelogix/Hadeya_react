@@ -15,7 +15,8 @@
 }
 
 body {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  overflow-x: hidden;
 }
 
 .sidebar {
@@ -39,7 +40,7 @@ body {
 img,
 svg {
   vertical-align: middle;
-  color: white;
+  /*color: white;*/
 }
  
 .LogoutText {
