@@ -2,3 +2,119 @@
   padding: 0px;
   margin: 0px;
 }
+.fs-12 {
+  font-size: clamp(12px, 5vw, 12px);
+}
+.fs-14 {
+  font-size: clamp(10px, 4vw, 14px);
+}
+.fs-16 {
+  font-size: clamp(12px, 4vw, 16px);
+}
+.fs-18 {
+  font-size: clamp(14px, 4vw, 18px);
+}
+.fs-20 {
+  font-size: clamp(16px, 4vw, 20px);
+}
+.fs-24 {
+  font-size: clamp(19px, 4vw, 24px);
+}
+.fs-30 {
+  font-size: clamp(22px, 4vw, 30px);
+}
+.fs-40 {
+  font-size: clamp(31px, 4vw, 40px);
+}
+.fs-48 {
+  font-size: clamp(35px, 4vw, 48px);
+}
+.radius-16 {
+  border-radius: 16px;
+}
+.radius-20 {
+  border-radius: 20px;
+}
+.radius-30 {
+  border-radius: 30px;
+}
+.height-40 {
+  height: 40px;
+}
+.height-48 {
+  height: 48px;
+}
+.gray-text {
+  color: #667085;
+}
+.gray-lite-clr {
+  color: #475467;
+}
+
+.get-touch-section {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #8dd4db !important;
+  backdrop-filter: blur(10px) !important;
+  .heading {
+    font-size: clamp(35px, 4vw, 48px);
+  }
+  .lead {
+    font-size: clamp(12px, 4vw, 16px);
+  }
+  .line-container {
+    .title-line {
+      width: 50%;
+      height: 2px;
+      background-color: white;
+      margin-top: 5px;
+      position: relative;
+
+      .dot {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+  .form-style {
+    background-color: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    input {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      backdrop-filter: blur(10px) !important;
+      border-color: white !important;
+    }
+    textarea {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      backdrop-filter: blur(10px) !important;
+      border-color: white !important;
+    }
+  }
+}
+
+.social-section {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #8dd4db !important;
+  backdrop-filter: blur(10px) !important;
+  .social-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .lead {
+    font-size: clamp(12px, 4vw, 16px);
+  }
+  .logo-container {
+    img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+  }
+}
