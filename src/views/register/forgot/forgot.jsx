@@ -52,11 +52,12 @@ const Forgot = () => {
                                 defaultCountry="PK"
                                 value={value}
                                 onChange={handlePhoneChange}
+                                required
                             />
                         </div>
-                        <button type="submit" className="btn auth-btn-primary w-100">
+                        <Link to='/verify' type="submit" className="btn auth-btn-primary w-100">
                             Send OTP
-                        </button>
+                        </Link>
                     </form>
                 </div>
             </div>
