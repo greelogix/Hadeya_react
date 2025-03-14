@@ -1,0 +1,220 @@
+.profile-form {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #6B7280;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .image-upload-section {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 2rem;
+
+    .avatar-preview {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #E5E7EB;
+      background-color: #D8B4E2;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        .camera-icon {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        opacity: 0.9;
+      }
+
+      .hidden-input {
+        display: none;
+      }
+
+      .camera-icon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.4);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      color: #374151;
+      transition: all 0.3s ease;
+      background-color: white;
+
+      &:focus {
+        outline: none;
+        border-color: #60A5FA;
+        box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+      }
+
+      &.error {
+        border-color: #EF4444;
+        background-color: #FEF2F2;
+      }
+
+      &:disabled {
+        background-color: #F3F4F6;
+        cursor: not-allowed;
+      }
+    }
+
+    &.social-input {
+      input {
+        padding-left: 80px;
+        background-color: white;
+      }
+
+      .http-prefix {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6B7280;
+        font-size: 0.875rem;
+        pointer-events: none;
+        background-color: white;
+        z-index: 1;
+      }
+
+      .input-wrapper {
+        position: relative;
+        background-color: white;
+        border-radius: 0.5rem;
+        
+        &::after {
+          content: '';
+          // position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          z-index: 0;
+          pointer-events: none;
+        }
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .error-message {
+      color: #EF4444;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+
+      &::before {
+        content: "⚠️";
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .save-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #8DD4DB;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: #3B82F6;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.4);
+    }
+
+    &:disabled {
+      background-color: #9CA3AF;
+      cursor: not-allowed;
+    }
+  }
+}

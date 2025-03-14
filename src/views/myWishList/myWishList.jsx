@@ -8,14 +8,25 @@ import instgram from "../../assets/images/instgram.png";
 import snapchat from "../../assets/images/snapchat.png";
 import single_logo from "../../assets/images/single-logo.png";
 import Chart from "../../shared/components/chart/chart";
-import { pieChartData } from "../../system/constants/GlobalConstants";
+import {
+  pieChartData,
+  techWishlistItems,
+} from "../../system/constants/GlobalConstants";
+import Modal from "../../shared/components/modal/modal";
+import MultipleProductCard from "../../shared/components/multipleProductCard/multipleProductCard";
+import FooterComponent from "../../shared/components/footerComponent/footerComponent";
+import { connect } from "react-redux";
+import { modalActions } from "../../redux/actions/modal.actions/modal.actions";
+import ProfileForm from "../../shared/components/profileForm/profileForm";
 
-const MyWishList = () => {
+const MyWishList = (props) => {
+  const handleModal = () => props.handleModal();
+
   return (
     <div className="main-container d-flex flex-coulmn justify-content-center">
       <div className="width-90 my-wishlist">
         <div className="head-section mt-5">
-          <p className="fw-bold heading">My Wishlist</p>
+          <p className="fw-semibold heading">My Wishlist</p>
           <p className="fs-16 gray-lite-clr">
             Manage your lists with ease—track, edit, and fulfill your wishes.
           </p>
@@ -30,12 +41,15 @@ const MyWishList = () => {
                     <img src={avatar} alt="" />
                   </div>
                   <div>
-                    <p className="fw-bold fs-16 mb-0">Fahd Abduallah </p>
+                    <p className="fw-semibold fs-16 mb-0">Fahd Abduallah </p>
                     <p className="fs-14">Fahd Abduallah Ahmed Al-Sabah</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center align-items-center edit-btn">
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <i
+                    onClick={handleModal}
+                    class="fa-regular fa-pen-to-square pointer"
+                  ></i>
                 </div>
               </div>
               <p className="fs-18 py-3">
@@ -78,35 +92,14 @@ const MyWishList = () => {
           </div>
         </div>
         <div className="create-wishlist-container mt-5">
-          {/* <div className="row">
-            <div className="col-lg-6 col-12 radius-16 p-4 create-section">
-              <div className="row">
-                <div className="col-sm-6 ">
-                  <p className="fs-24 text-white fw-bold">Create a Wishlist</p>
-                  <p className="fs-16 text-white fw-bold py-4">
-                    Start building your wishlist by adding items and
-                    personalizing it to match your goals.
-                  </p>
-
-                  <button className="btn  radius-30 bg-white w-100 height-48">
-                    Create Wishist +
-                  </button>
-                </div>
-                <div className="col-sm-6 d-flex justify-content-center align-items-center order-0 order-sm-1">
-                  <img src={single_logo} width="80%" alt="" />
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="row m-0 justify-content-between mb-5">
             <div className="col-lg-6 col-12 radius-16 p-4 create-section">
-              <div className="row">
-                {/* Image Column (Will appear first on small screens) */}
-
-                {/* Text Column (Will appear last on small screens) */}
-                <div className="col-sm-6 order-last order-sm-first">
-                  <p className="fs-24 text-white fw-bold">Create a Wishlist</p>
-                  <p className="fs-16 text-white fw-bold py-4">
+              <div className="row h-100">
+                <div className="col-sm-6 d-flex flex-column justify-content-center order-last order-sm-first">
+                  <p className="fs-24 text-white fw-semibold">
+                    Create a Wishlist
+                  </p>
+                  <p className="fs-16 text-white fw-semibold py-4">
                     Start building your wishlist by adding items and
                     personalizing it to match your goals.
                   </p>
@@ -124,9 +117,36 @@ const MyWishList = () => {
             </div>
           </div>
         </div>
+
+        <div className="products-section mt-5">
+          <div className="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <p className="fs-20 fw-semibold text-black mb-2">Wishlists</p>
+              <p className="fs-14 text-muted">
+                View, manage, and update all your wishlists in one place
+              </p>
+            </div>
+          </div>
+          <hr className="my-4" />
+          <div className="wishlist-items row">
+            {techWishlistItems.map((item) => (
+              <MultipleProductCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+        <FooterComponent />
       </div>
+
+      <Modal centered={true} show={props.modalOpen} handleClose={handleModal}>
+        <ProfileForm />
+      </Modal>
     </div>
   );
 };
-
-export default MyWishList;
+const mapStateToProps = (state) => ({
+  modalOpen: state.modalReducer.modalOpen,
+});
+const mapDispatchToProps = (dispatch) => ({
+  handleModal: () => dispatch(modalActions.handleModal()),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(MyWishList);

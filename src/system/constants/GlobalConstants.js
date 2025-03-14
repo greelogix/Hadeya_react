@@ -74,9 +74,9 @@ export const accordionList = [
       "Yes, you can easily update or remove items from your wishlist anytime in your account dashboard.",
   },
   {
-    title: "What happens if my wishlist doesn’t get fully funded?",
+    title: "What happens if my wishlist doesn't get fully funded?",
     description:
-      "You’ll still receive any partial contributions made, allowing you to use the funds towards your goal.",
+      "You'll still receive any partial contributions made, allowing you to use the funds towards your goal.",
   },
   {
     title: "Can I share my wishlist with others?",
@@ -124,4 +124,95 @@ export const pieChartData = [
   { name: "Education", value: 1, color: "#D3B8E4" },
   { name: "Gadget", value: 1, color: "#FFCECE" },
   { name: "Clothing", value: 1, color: "#A8E6E0" },
+];
+
+export const techWishlistItems = [
+  {
+    id: 1,
+    title: "Tech Dream",
+    items: [
+      { title: "Iphone 16 Pro Max", image: simgle_mobile },
+      { title: "Gel Case", image: double_mobile },
+      { title: "Air Pods 3rd Generation", image: airpods },
+    ],
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning ...",
+    totalAmount: 300,
+    currentAmount: 100,
+    currency: "KWD",
+    status: "Public",
+    itemCount: "5 items",
+  },
+  {
+    id: 2,
+    title: "Tech Dream",
+    items: [
+      { title: "Iphone 16 Pro Max", image: simgle_mobile },
+      { title: "Gel Case", image: double_mobile },
+      { title: "Air Pods 3rd Generation", image: airpods },
+    ],
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning ...",
+    totalAmount: 300,
+    currentAmount: 50,
+    currency: "KWD",
+    status: "Pending",
+    itemCount: "5 items",
+  },
+  {
+    id: 3,
+    title: "Tech Dream",
+    items: [
+      { title: "Iphone 16 Pro Max", image: simgle_mobile },
+      { title: "Gel Case", image: double_mobile },
+      { title: "Air Pods 3rd Generation", image: airpods },
+    ],
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning ...",
+    totalAmount: 300,
+    currentAmount: 200,
+    currency: "KWD",
+    status: "Fulfilled",
+    itemCount: "5 items",
+  },
+  {
+    id: 4,
+    title: "Tech Dream",
+    items: [
+      { title: "Iphone 16 Pro Max", image: simgle_mobile },
+      { title: "Gel Case", image: double_mobile },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+    ],
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning ...",
+    totalAmount: 300,
+    currentAmount: 0,
+    currency: "KWD",
+    status: "Pending",
+    itemCount: "5 items",
+  },
+  {
+    id: 5,
+    title: "Tech Dream",
+    items: [
+      { title: "Iphone 16 Pro Max", image: simgle_mobile },
+      { title: "Gel Case", image: double_mobile },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+      { title: "Air Pods 3rd Generation", image: airpods },
+    ],
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning ...",
+    totalAmount: 300,
+    currentAmount: 300,
+    currency: "KWD",
+    status: "Approved",
+    itemCount: "5 items",
+  },
 ];

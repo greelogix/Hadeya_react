@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Chart = ({ data }) => {
   return (
     <div className=" ">
-      <p className="fw-bold fs-24">Contributions Categories</p>
+      <p className="fw-semibold fs-24">Contributions Categories</p>
       <p className="text-muted fs-16">
         Total amount of contributions <strong>3</strong>
       </p>

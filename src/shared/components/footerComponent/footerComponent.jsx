@@ -33,7 +33,7 @@ const FooterComponent = () => {
               className="btn btn-outline-light px-4 py-2 d-flex align-items-center gap-2"
               style={{ borderRadius: "50px", fontWeight: "bold" }}
             >
-              <img src={insta_img} alt="" /> <p className="mb-0">Instagram</p>{" "}
+              <img src={insta_img} alt="" /> <p className="mb-0 text-white">Instagram</p>{" "}
               <img src={arrow_up} alt="" />
             </a>
 
@@ -44,7 +44,7 @@ const FooterComponent = () => {
               className="btn btn-outline-light px-4 py-2 d-flex  align-items-center gap-2 social-text"
               style={{ borderRadius: "50px", fontWeight: "bold" }}
             >
-              <img src={x_img} alt="" /> <p className="mb-0">Twitter "x" </p>{" "}
+              <img src={x_img} alt="" /> <p className="mb-0 text-white">Twitter "x" </p>{" "}
               <img src={arrow_up} alt="" />
             </a>
 
@@ -55,7 +55,7 @@ const FooterComponent = () => {
               className="btn btn-outline-light px-4 py-2 d-flex align-items-center gap-2"
               style={{ borderRadius: "50px", fontWeight: "bold" }}
             >
-              <img src={wtp_img} alt="" /> <p className="mb-0">Whatsapp </p>{" "}
+              <img src={wtp_img} alt="" /> <p className="mb-0 text-white">Whatsapp </p>{" "}
               <img src={arrow_up} alt="" />
             </a>
           </div>
