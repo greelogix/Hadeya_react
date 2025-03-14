@@ -1,0 +1,30 @@
+.personal-detail {
+  .share-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .profile-container {
+    width: 120px;
+    height: 120px;
+    background-color: #fbc4c4;
+    border-radius: 50%;
+  }
+}
+.product-section {
+  .current-amount-style {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+  .target-amount-style {
+    font-size: clamp(14px, 5vw, 18px);
+  }
+  .description-style {
+    font-size: clamp(12px, 5vw, 15px);
+  }
+  .btn-style {
+    background-color: #8dd4db !important;
+    height: 36px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+}
