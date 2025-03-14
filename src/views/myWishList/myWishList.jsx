@@ -18,9 +18,11 @@ import FooterComponent from "../../shared/components/footerComponent/footerCompo
 import { connect } from "react-redux";
 import { modalActions } from "../../redux/actions/modal.actions/modal.actions";
 import ProfileForm from "../../shared/components/profileForm/profileForm";
+import { useNavigate } from "react-router-dom";
 
 const MyWishList = (props) => {
   const handleModal = () => props.handleModal();
+  const navigate = useNavigate();
 
   return (
     <div className="main-container d-flex flex-coulmn justify-content-center">
@@ -103,7 +105,7 @@ const MyWishList = (props) => {
                     Start building your wishlist by adding items and
                     personalizing it to match your goals.
                   </p>
-                  <button className="btn radius-30 bg-white w-100 height-48">
+                  <button className="btn radius-30 bg-white w-100 height-48" onClick={()=>navigate("/create-wishList")}>
                     Create Wishlist +
                   </button>
                 </div>

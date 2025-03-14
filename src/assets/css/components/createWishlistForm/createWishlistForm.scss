@@ -1,0 +1,92 @@
+.create-wishlist-form {
+  .form-section {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #101828;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: #6B7280;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 0.5rem;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #E5E7EB;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        color: #374151;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: #60A5FA;
+          box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+        }
+
+        &.error {
+          border-color: #EF4444;
+          background-color: #FEF2F2;
+        }
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      .error-message {
+        color: #EF4444;
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+      }
+    }
+
+    .proceed-button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #8DD4DB;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: darken(#8DD4DB, 5%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(141, 212, 219, 0.4);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
+} 

@@ -9,7 +9,7 @@ import share from "../../assets/images/share-vector.png";
 import user from "../../assets/images/user-01.png";
 import { productList } from "../../system/constants/GlobalConstants";
 import FooterComponent from "../../shared/components/footerComponent/footerComponent";
-import SingleProductCard from "../../shared/components/singleProductCard/singleProductCard"
+import SingleProductCard from "../../shared/components/singleProductCard/singleProductCard";
 import ContactFormCard from "../../shared/components/contactFormCard/contactFormCard";
 
 const WishListShare = () => {
