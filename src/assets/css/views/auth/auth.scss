@@ -65,7 +65,7 @@ $border-color: #ddd;
 .signup-subtitle {
   text-align: center;
   color: lighten($font-color, 20%);
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -180,7 +180,7 @@ $border-color: #ddd;
 .divider {
   display: flex;
   align-items: center;
-  margin: 25px 0;
+  margin: 15px 0;
   color: #D1D5DB;
 
   &::before,
@@ -352,7 +352,8 @@ $border-color: #ddd;
   .auth-footer-rights {
     display: none;
   }
-  .signup-card{
+
+  .signup-card {
     animation: unset;
   }
 }
@@ -389,6 +390,19 @@ $border-color: #ddd;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.auth-input-container {
+  position: relative;
+  margin-bottom: 30px !important;
+
+  .error-text {
+    position: absolute;
+    color: #EF4444 !important;
+  }
+}
+.auth-input.is-invalid {
+  border: 1px solid #F87171 !important;
 }
 
 /* Media queries for responsiveness */

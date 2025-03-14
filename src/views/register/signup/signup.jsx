@@ -30,9 +30,9 @@ const Signup = () => {
                 .matches(/^[a-zA-Z\s]*$/, "Only alphabets and spaces are allowed")
                 .required("Name is required"),
             username: Yup.string().required("Username is required"),
-            phone: Yup.string().required("Phone number is required"),
+            phone: Yup.string().required("Please enter a valid phone number."),
             password: Yup.string()
-                .min(8, "Password must be at least 8 characters")
+                .min(6, "Password must be at least 6 characters.")
                 .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
                 .matches(/[a-z]/, "Password must contain at least one lowercase letter")
                 .matches(/[0-9]/, "Password must contain at least one number")
@@ -57,17 +57,18 @@ const Signup = () => {
                         <img src={hadeyaLogo} alt="Hadeya Logo"/>
                     </div>
 
-          <h1 className="signup-title">Sign up</h1>
-          <p className="signup-subtitle">
-            Join Hadeya and start creating and sharing your wishlists today!
-          </p>
+                    <h1 className="signup-title">Sign up</h1>
+                    <p className="signup-subtitle">
+                        Join Hadeya and start creating and sharing your wishlists today!
+                    </p>
 
                     <form onSubmit={formik.handleSubmit}>
-                        <div className="mb-3">
+                        <div className="auth-input-container">
                             <label htmlFor="name" className="form-label">Name</label>
                             <input
                                 type="text"
-                                className="form-control auth-input"
+                                className={`form-control auth-input ${formik.touched.name && formik.errors.name ? 'is-invalid' : ''}`}
+                                id="name"
                                 id="name"
                                 name="name"
                                 value={formik.values.name}
@@ -76,12 +77,12 @@ const Signup = () => {
                                 required
                             />
                             {formik.touched.name && formik.errors.name ? (
-                                <div className="text-danger"
-                                     style={{fontSize: '12px', marginTop: '5px'}}>{formik.errors.name}</div>
+                                <div className="text-danger error-text"
+                                     style={{fontSize: '10px', marginTop: '5px'}}>{formik.errors.name}</div>
                             ) : null}
                         </div>
 
-                        <div className="mb-3">
+                        <div className="auth-input-container">
                             <label htmlFor="username" className="form-label">User Name</label>
                             <input
                                 type="text"
@@ -90,19 +91,14 @@ const Signup = () => {
                                 name="username"
                                 value={formik.values.username}
                                 onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
                                 required
                             />
-                            {formik.touched.username && formik.errors.username ? (
-                                <div className="text-danger"
-                                     style={{fontSize: '12px', marginTop: '5px'}}>{formik.errors.username}</div>
-                            ) : null}
                         </div>
 
-                        <div className="mb-3">
+                        <div className="auth-input-container">
                             <label htmlFor="phone" className="form-label">Phone</label>
                             <PhoneInput
-                                className='auth-input'
+                                className={`auth-input ${formik.touched.phone && formik.errors.phone ? 'error' : ''}`}
                                 international
                                 defaultCountry="PK"
                                 value={phoneValue}
@@ -112,17 +108,17 @@ const Signup = () => {
                                 }}
                             />
                             {formik.touched.phone && formik.errors.phone ? (
-                                <div className="text-danger"
-                                     style={{fontSize: '12px', marginTop: '5px'}}>{formik.errors.phone}</div>
+                                <div className="text-danger error-text"
+                                     style={{fontSize: '10px', marginTop: '5px'}}>{formik.errors.phone}</div>
                             ) : null}
                         </div>
 
-                        <div className="mb-3">
+                        <div className="auth-input-container">
                             <label htmlFor="password" className="form-label">Password</label>
                             <div className="password-input-wrapper">
                                 <input
                                     type={showPassword ? "text" : "password"}
-                                    className="form-control auth-input"
+                                    className={`form-control auth-input ${formik.touched.password && formik.errors.password ? 'error' : ''}`}
                                     id="password"
                                     name="password"
                                     value={formik.values.password}
@@ -139,19 +135,19 @@ const Signup = () => {
                                 </button>
                             </div>
                             {formik.touched.password && formik.errors.password ? (
-                                <div className="text-danger"
-                                     style={{fontSize: '12px', marginTop: '5px'}}>{formik.errors.password}</div>
+                                <div className="text-danger error-text"
+                                     style={{fontSize: '10px', marginTop: '5px'}}>{formik.errors.password}</div>
                             ) : null}
                         </div>
 
-            <button type="submit" className="btn auth-btn-primary w-100">
-              Sign Up
-            </button>
-          </form>
+                        <button type="submit" className="btn auth-btn-primary w-100">
+                            Sign Up
+                        </button>
+                    </form>
 
-          <div className="divider">
-            <span className="divider-text">OR</span>
-          </div>
+                    <div className="divider">
+                        <span className="divider-text">OR</span>
+                    </div>
 
                     <button type="button" className="btn-social mb-3">
                         <img src={GoogleIcon} alt=""/>
@@ -163,11 +159,11 @@ const Signup = () => {
                         <span className="ms-2">Sign up with Apple</span>
                     </button>
 
-          <div className="login-link">
-            Already have an account? <Link to="/login">Log in</Link>
-          </div>
-        </div>
-      </div>
+                    <div className="login-link">
+                        Already have an account? <Link to="/login">Log in</Link>
+                    </div>
+                </div>
+            </div>
 
             <div className="auth-footer-rights">
                 © 2025 Hadeya . All rights reserved.
