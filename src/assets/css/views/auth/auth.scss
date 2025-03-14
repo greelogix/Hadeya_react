@@ -91,9 +91,9 @@ $border-color: #ddd;
   height: 40px;
 
   &:focus {
-    border-color: $primary-color;
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
-    outline: none;
+    border-color: $primary-color !important;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.2) !important;
+    outline: none !important;
   }
 }
 
@@ -158,15 +158,15 @@ $border-color: #ddd;
 }
 
 .auth-btn-primary {
-  background-color: $primary-color;
-  border: none;
-  padding: 12px;
-  border-radius: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: $primary-color !important;
+  border: none !important;
+  padding: 12px !important;
+  border-radius: 40px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
 
   &:hover {
     background-color: darken($primary-color, 5%);
@@ -280,6 +280,105 @@ $border-color: #ddd;
 .custom-check-label {
   padding-top: 2px;
 }
+
+.otp-input {
+  font-size: 18px;
+  text-align: center;
+  margin: 5px;
+  height: 48px;
+  width: 48px;
+  background-color: #F3F4F6 !important;
+  border: none !important;
+
+  &:focus {
+    border-color: $primary-color !important;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.2) !important;
+    outline: none !important;
+  }
+}
+
+//.otp-modal-overlay {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background: rgba(0, 0, 0, 0.5);
+//  backdrop-filter: blur(5px);
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  opacity: 0;
+//  visibility: hidden;
+//  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+//}
+
+.otp-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.otp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay */
+  backdrop-filter: blur(10px); /* Strong blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.otp-modal-content {
+  border-radius: 12px;
+  width: fit-content;
+  text-align: center;
+  animation: fadeInRight 0.3s ease-in-out;
+}
+
+.signup-otp-wrapper {
+  .signup-container {
+    min-height: 100%;
+
+    &:before {
+      background-image: unset;
+      background-color: transparent;
+    }
+  }
+
+  .auth-footer-rights {
+    display: none;
+  }
+  .signup-card{
+    animation: unset;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 @keyframes fadeIn {
   from {

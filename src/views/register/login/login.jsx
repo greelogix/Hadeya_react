@@ -81,7 +81,7 @@ const Login = () => {
                                 <input className="form-check-input custom-checkbox" type="checkbox" id="rememberMe"/>
                                 <label className="form-check-label custom-check-label" htmlFor="rememberMe">Remember Me</label>
                             </div>
-                            <a href="#" className="forgot-link fw-semibold">Forgot password ?</a>
+                            <Link to="/forgot-password" className="forgot-link fw-semibold">Forgot password ?</Link>
                         </div>
                         <button type="submit" className="btn auth-btn-primary w-100">
                             Sign in
