@@ -1,0 +1,129 @@
+.add-wishlist-products {
+  .header {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #6B7280;
+      font-size: 0.875rem;
+    }
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 1;
+      background: #F9FAFB;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .view-details-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #8DD4DB;
+          color: white;
+        }
+      }
+    }
+
+    .product-info {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #6B7280;
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .price-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        .base-amount,
+        .admin-commission {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          .label {
+            color: #6B7280;
+            font-size: 0.75rem;
+          }
+
+          .amount {
+            color: #111827;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .add-item-btn {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #8DD4DB;
+        color: black;
+        border: none;
+        border-radius: 2rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken(#8DD4DB, 5%);
+        }
+      }
+    }
+  }
+} 

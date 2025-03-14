@@ -6,7 +6,8 @@ import WishListShare from "../../../views/wishListShare/wishListShare";
 import MyWishList from "../../../views/myWishList/myWishList";
 import Otp from "../../../views/register/otp/otp";
 import SetPassword from "../../../views/register/set-password/set-password";
-
+import CreateWishList from "../../../views/createWishList/createWishList";
+import AddWishList from "../../../views/addWishList/addWishList";
 
 const routes = [
   {
@@ -53,16 +54,30 @@ const routes = [
     hasNavBar: false,
   },
   {
-    path: "/wishListShare",
+    path: "/wish-list-share",
     name: "WishListShare",
     component: <WishListShare />,
     protected: true,
     hasNavBar: true,
   },
   {
-    path: "/myWishList",
+    path: "/my-wishList",
     name: "MyWishList",
     component: <MyWishList />,
+    protected: true,
+    hasNavBar: true,
+  },
+  {
+    path: "/create-wishList",
+    name: "CreateWishList",
+    component: <CreateWishList />,
+    protected: true,
+    hasNavBar: true,
+  },
+  {
+    path: "/add-wishList",
+    name: "AddWishList",
+    component: <AddWishList />,
     protected: true,
     hasNavBar: true,
   },

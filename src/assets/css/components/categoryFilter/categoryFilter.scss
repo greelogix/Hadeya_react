@@ -1,0 +1,32 @@
+.category-filter {
+  margin-bottom: 2rem;
+
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .category-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #F3F4F6;
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #E5E7EB;
+      color: #374151;
+    }
+
+    &.active {
+      background-color: #8DD4DB;
+      color: #000000;
+    }
+  }
+} 

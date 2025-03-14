@@ -1,6 +1,7 @@
 import airpods from "../../assets/images/airpods.png";
 import simgle_mobile from "../../assets/images/simgle-mobile.png";
 import double_mobile from "../../assets/images/double-mobile.png";
+import { Category } from "@mui/icons-material";
 
 export const UserActionType = {
   Create: "create",
@@ -95,6 +96,7 @@ export const productList = [
     img: airpods,
     currentAmount: 112,
     targetAmount: 533,
+    commission: 5,
     currency: "KWD",
     title: "IPhone 16 Pro Max",
     description:
@@ -104,6 +106,8 @@ export const productList = [
     img: simgle_mobile,
     currentAmount: 212,
     targetAmount: 333,
+    commission: 5,
+
     currency: "KWD",
     title: "IPhone 16 Pro Max",
     description:
@@ -113,6 +117,7 @@ export const productList = [
     img: double_mobile,
     currentAmount: 111,
     targetAmount: 777,
+    commission: 5,
     currency: "KWD",
     title: "IPhone 16 Pro Max",
     description:
@@ -214,5 +219,86 @@ export const techWishlistItems = [
     currency: "KWD",
     status: "Approved",
     itemCount: "5 items",
+  },
+];
+
+export const addWishListProductList = [
+  {
+    img: airpods,
+    currentAmount: 112,
+    targetAmount: 533,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Gadget",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: simgle_mobile,
+    currentAmount: 212,
+    targetAmount: 333,
+    commission: 5,
+
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Gadget",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: double_mobile,
+    currentAmount: 111,
+    targetAmount: 777,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Electronics",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: double_mobile,
+    currentAmount: 111,
+    targetAmount: 777,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Gadget",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: double_mobile,
+    currentAmount: 111,
+    targetAmount: 777,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Electronics",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: airpods,
+    currentAmount: 112,
+    targetAmount: 533,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Clothing",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
+  },
+  {
+    img: airpods,
+    currentAmount: 112,
+    targetAmount: 533,
+    commission: 5,
+    currency: "KWD",
+    title: "IPhone 16 Pro Max",
+    category: "Education",
+    description:
+      "Experience cutting-edge innovation with the iPhone 16 Pro Max, featuring a stunning display, advanced camera system, and unparalleled...",
   },
 ];
